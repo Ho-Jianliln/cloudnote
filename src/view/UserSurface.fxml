@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800." prefWidth="680.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserSurface">
+   <children>
+      <TabPane layoutX="-2.0" prefHeight="800.0" prefWidth="768.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="130.0">
+        <tabs>
+          <Tab text="我的笔记">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="759.0" prefWidth="815.0">
+                     <children>
+                        <TreeView fx:id="mynotetree" layoutX="2.0" layoutY="-4.0" prefHeight="451.0" prefWidth="237.0" />
+                        <Label fx:id="currenttips" layoutX="252.0" layoutY="31.0" prefHeight="31.0" prefWidth="84.0" text="近期笔记">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="add_noteBut" layoutX="81.0" layoutY="556.0" mnemonicParsing="false" onAction="#add_note" text="添加笔记" />
+                        <Button fx:id="modifinote_But" layoutX="81.0" layoutY="618.0" mnemonicParsing="false" onAction="#modifi_note" text="修改笔记" />
+                        <Button fx:id="delenote_But" layoutX="81.0" layoutY="676.0" mnemonicParsing="false" onAction="#dele_note" text="删除笔记" />
+                        <Button fx:id="opennoteBut" layoutX="81.0" layoutY="501.0" mnemonicParsing="false" onAction="#opennote" text="打开笔记" />
+                        <TableView fx:id="current_notelist" layoutX="240.0" layoutY="62.0" prefHeight="699.0" prefWidth="528.0">
+                          <columns>
+                            <TableColumn fx:id="title_column1" prefWidth="282.0" text="标题" />
+                            <TableColumn fx:id="like_column1" minWidth="0.0" prefWidth="61.0" text="获赞" />
+                              <TableColumn fx:id="lasttime_column1" prefWidth="181.0" text="提交时间" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="searchby_title1" layoutX="348.0" layoutY="16.0" prefHeight="30.0" prefWidth="230.0" promptText="按标题搜索" />
+                        <Button fx:id="searchBut" layoutX="624.0" layoutY="16.0" mnemonicParsing="false" onAction="#search1" text="搜索" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="分享空间">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="share_notelist" layoutX="2.0" layoutY="41.0" prefHeight="720.0" prefWidth="766.0">
+                          <columns>
+                            <TableColumn fx:id="author_column2" prefWidth="108.0" text="作者" />
+                            <TableColumn fx:id="title_column2" prefWidth="376.0" text="标题" />
+                              <TableColumn fx:id="like_column2" prefWidth="64.0" text="获赞" />
+                              <TableColumn fx:id="lasttime_column2" prefWidth="216.0" text="时间" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="searchby_author2" layoutX="150.0" layoutY="6.0" prefHeight="30.0" prefWidth="191.0" promptText="按作者搜索" />
+                        <TextField fx:id="searchby_title2" layoutX="356.0" layoutY="6.0" prefHeight="30.0" prefWidth="318.0" promptText="按标题搜索" />
+                        <Button layoutX="685.0" layoutY="6.0" mnemonicParsing="false" onAction="#search2" text="搜索" />
+                        <Button layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#opennote2" text="打开" />
+                        <Button layoutX="81.0" layoutY="6.0" mnemonicParsing="false" onAction="#give_like" text="点赞" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="公告">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="annoulist" prefHeight="760.0" prefWidth="766.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="论坛">
+               <content>
+                  <AnchorPane prefHeight="759.0" prefWidth="750.0">
+                     <children>
+                        <ListView fx:id="commentlist" prefHeight="536.0" prefWidth="766.0" />
+                        <TextArea fx:id="commenfield" layoutX="26.0" layoutY="561.0" prefHeight="173.0" prefWidth="637.0" />
+                        <Button layoutX="689.0" layoutY="639.0" mnemonicParsing="false" onAction="#send_comment" text="发送" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="账户">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="oldPassField" layoutX="288.0" layoutY="512.0" />
+                        <TextField fx:id="newPassField" layoutX="288.0" layoutY="588.0" />
+                        <Label layoutX="189.0" layoutY="517.0" text="输入旧密码:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="243.0" layoutY="470.0" text="修改密码:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="192.0" layoutY="593.0" text="输入新密码:" />
+                        <Button layoutX="526.0" layoutY="552.0" mnemonicParsing="false" onAction="#resetPass" text="设置">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="resetPasstips" layoutX="361.0" layoutY="472.0" textFill="RED" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

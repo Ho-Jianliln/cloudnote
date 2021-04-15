@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Launcher">
+   <children>
+      <Label layoutX="89.0" layoutY="82.0" text="账号：">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="147.0" text="密码：">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="accountfield" layoutX="165.0" layoutY="81.0" />
+      <PasswordField fx:id="passwordfied" layoutX="165.0" layoutY="146.0" />
+      <CheckBox fx:id="pwmemery" layoutX="89.0" layoutY="202.0" mnemonicParsing="false" onAction="#pwmemory" text="记住密码" />
+      <Label fx:id="regist" layoutX="326.0" layoutY="202.0" onMouseClicked="#toRegist" text="注册">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginBut" layoutX="175.0" layoutY="268.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="183.0" text="登录">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="combo1" layoutX="64.0" layoutY="274.0" prefHeight="30.0" prefWidth="96.0" />
+   </children>
+</AnchorPane>

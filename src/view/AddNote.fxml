@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="850.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNote">
+   <children>
+      <TextField fx:id="titlefield" layoutX="153.0" layoutY="34.0" prefHeight="30.0" prefWidth="477.0" />
+      <TextArea fx:id="textfield" layoutX="22.0" layoutY="85.0" prefHeight="650.0" prefWidth="656.0" />
+      <Label layoutX="79.0" layoutY="35.0" text="标题：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveBut" layoutX="555.0" layoutY="775.0" mnemonicParsing="false" onAction="#tosave" text="保存">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="combo2" layoutX="386.0" layoutY="781.0" prefHeight="30.0" prefWidth="114.0" />
+      <Button fx:id="divideBut" layoutX="178.0" layoutY="776.0" mnemonicParsing="false" onAction="#todivide" text="分组">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="savetips" layoutX="564.0" layoutY="746.0" textFill="RED" />
+   </children>
+</AnchorPane>

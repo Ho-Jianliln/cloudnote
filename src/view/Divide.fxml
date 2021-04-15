@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="563.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Divide">
+   <children>
+      <TreeView fx:id="divide_tree" prefHeight="511.0" prefWidth="402.0" />
+      <Label layoutX="45.0" layoutY="529.0" text="选择一个分组" />
+      <Button layoutX="170.0" layoutY="520.0" mnemonicParsing="false" onAction="#divide_confirm" prefHeight="38.0" prefWidth="63.0" text="确定">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="dividetips" layoutX="298.0" layoutY="529.0" />
+   </children>
+</AnchorPane>
